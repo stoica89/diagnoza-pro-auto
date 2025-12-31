@@ -1,0 +1,292 @@
+:root {
+  --accent: #d92b2b;
+  --dark: #071a2b;
+  --muted: #546a78;
+  --bg: #071a2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.45;
+  color: #0f1720;
+  background: linear-gradient(180deg, #052030 0%, #071a2b 100%);
+}
+
+header {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(4px);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand img {
+  height: 92px;
+  /* make logo clearly clickable and add hover feedback */
+}
+.brand a {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}
+.brand a img {
+  transition: transform 0.15s ease;
+}
+.brand a:hover img {
+  transform: scale(1.03);
+}
+.home-hint {
+  font-size: 12px;
+  color: #cfe7ff;
+  margin-top: 4px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.15s ease, max-height 0.15s ease;
+  display: block;
+}
+
+/* show hint when hovering the logo (works for header structure where <a> is followed by a sibling <div>) */
+header a:hover + div .home-hint,
+.brand a:hover + div .home-hint {
+  opacity: 1;
+  max-height: 48px;
+}
+
+/* show permanently when body has the class (used on Contact and Preturi pages) */
+body.show-home-hint .home-hint {
+  opacity: 1;
+  max-height: 48px;
+}
+
+/* layout for logo + hint stacked */
+.logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.logo-wrap .home-hint {
+  text-align: center;
+}
+nav a {
+  color: #fff;
+  margin-left: 18px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.container {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 0 18px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 28px 0;
+}
+.hero .card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 22px;
+  border-radius: 12px;
+}
+.hero h1 {
+  color: #fff;
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+.lead {
+  color: #dbe6ef;
+}
+.cta {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 18px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+.feature {
+  background: #fff;
+  color: #071a2b;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+section.info {
+  margin-top: 20px;
+  color: #e6f0f7;
+}
+h2 {
+  color: #fff;
+  margin-top: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+footer {
+  margin-top: 30px;
+  padding: 18px;
+  color: #cfe7ff;
+  text-align: center;
+}
+.phone {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  color: #071a2b;
+}
+th,
+td {
+  padding: 10px;
+  border: 1px solid #e6eef5;
+  text-align: left;
+}
+
+/* Contact & small page common styles */
+.wrap {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 18px;
+}
+header img {
+  height: 82px;
+}
+form {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 18px;
+}
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 700;
+  color: #cfe7ff;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #2b4b5c;
+  background: #0d2a38;
+  color: #fff;
+}
+button {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #d92b2b;
+  color: #fff;
+  border: 0;
+  font-weight: 700;
+}
+.contact-info {
+  margin-top: 18px;
+  background: #fff;
+  color: #071a2b;
+  padding: 12px;
+  border-radius: 8px;
+}
+a {
+  color: #fff;
+}
+.note {
+  margin-top: 12px;
+  color: #9fb7c9;
+}
+
+/* Utilities */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 22px;
+  border-radius: 12px;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.service-pill {
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  color: #071a2b;
+}
+
+/* Desktop: place hero image to the right */
+@media (min-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr 460px;
+  }
+  .hero > div:last-child img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }
+}
+
+/* Responsive: tablet */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .brand img {
+    height: 82px;
+  }
+}
+
+/* Responsive: mobile */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 22px;
+  }
+  .brand img {
+    height: 64px;
+  }
+  header {
+    padding: 12px;
+  }
+  .container {
+    margin: 16px auto;
+    padding: 0 12px;
+  }
+  .wrap {
+    padding: 12px;
+  }
+}

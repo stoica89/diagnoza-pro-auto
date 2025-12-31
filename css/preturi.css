@@ -1,0 +1,35 @@
+/* Page-specific styles for preturi.html */
+body {
+  background: #071a2b;
+  color: #e6f0f7;
+}
+.wrap {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 18px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+header img {
+  height: 82px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  background: #fff;
+  color: #071a2b;
+}
+th,
+td {
+  padding: 12px;
+  border: 1px solid #e6eef5;
+  text-align: left;
+}
+.note {
+  margin-top: 12px;
+  color: #9fb7c9;
+}

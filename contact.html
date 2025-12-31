@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — DiagnozaProAuto.ro</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="show-home-hint">
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <div class="logo-wrap">
+            <a
+              href="index.html"
+              title="Înapoi la pagina principală"
+              aria-label="Înapoi la pagina principală"
+            >
+              <img src="Images/banner-diagnoza.png" alt="logo" />
+              <div class="home-hint">← Acasa</div>
+            </a>
+          </div>
+          <div>
+            <h1 style="margin: 0">Contact</h1>
+            <div style="color: #9fb7c9">
+              Programează o vizită sau cere o ofertă
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <form
+        action="mailto:contact@diagnozaproauto.ro"
+        method="post"
+        enctype="text/plain"
+      >
+        <label for="name">Nume</label>
+        <input id="name" name="name" required />
+
+        <label for="phone">Telefon</label>
+        <input id="phone" name="phone" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" />
+
+        <label for="msg">Mesaj / Detalii autoturism</label>
+        <textarea id="msg" name="message" rows="6"></textarea>
+
+        <button type="submit">Trimite</button>
+      </form>
+
+      <div class="contact-info">
+        <strong>Telefon:</strong> <a href="tel:+407XXXXXXX">+40 7XX XXX XXX</a
+        ><br />
+        <strong>Email:</strong>
+        <a href="mailto:contact@diagnozaproauto.ro"
+          >contact@diagnozaproauto.ro</a
+        ><br />
+        <strong>Program:</strong> Luni - Duminică: 08:00 - 20:00 (la cerere)
+      </div>
+      <div style="text-align: center; margin-top: 18px">
+        <a href="preturi.html" class="cta">Vezi Prețuri</a>
+      </div>
+    </div>
+  </body>
+</html>
